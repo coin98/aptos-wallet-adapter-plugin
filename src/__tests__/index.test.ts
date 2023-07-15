@@ -1,12 +1,13 @@
-import { AptosWallet } from "../index";
+import { NetworkName } from "@aptos-labs/wallet-adapter-core";
+import { Coin98Wallet } from "../index";
 
 /*
 Basic tests to make sure basic variables and functions are defined on the wallet
 
-Note: change AptosWallet to match your class name
+Note: change Coin98Wallet to match your class name
 */
-describe("AptosWallet", () => {
-  const wallet = new AptosWallet();
+describe("Coin98Wallet", () => {
+  const wallet = new Coin98Wallet({ network: NetworkName.Devnet });
 
   test("defines name", () => {
     expect(typeof wallet.name).toBe("string");
